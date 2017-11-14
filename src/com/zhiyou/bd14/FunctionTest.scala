@@ -7,7 +7,7 @@ object FunctionTest {
   def plusInt(x:Int, y:Int)= {
 
     println(s"调用函数plusInt, 结果值 : ${x+y}")
-    x + y;
+    x + y
   }
 
 
@@ -27,7 +27,7 @@ object FunctionTest {
   //定义一个函数, 函数随机
   def getRandomN(n:Int) = {
 
-    val random = new Random();
+    val random = new Random()
     random.nextInt(n)
   }
 
