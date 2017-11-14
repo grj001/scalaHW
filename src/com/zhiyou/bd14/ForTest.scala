@@ -1,6 +1,7 @@
 package com.zhiyou.bd14
 
 import java.util
+import java.util.Random
 
 import scala.util.control.Breaks
 
