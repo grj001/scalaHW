@@ -85,6 +85,12 @@ object FunctionTest {
     //计算面积
     caculateArea(4, randomArea);
     caculateArea(4, squareArea);
+
+    //计算等边三角形的面积
+    caculateArea(4, x => {
+      println(s"等边三角行的面积: ${x*x*scala.math.sqrt(3)/4}")
+      x*x*scala.math.sqrt(3)/4
+    })
   }
 
 
