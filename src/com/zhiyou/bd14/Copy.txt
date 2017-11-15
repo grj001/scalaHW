@@ -1,0 +1,69 @@
+19. val def lazy 定义变量的区别
+
+16. Array是可变(元素可变)的, 它和java数组T[] 是对应的
+数组是定长的, 定义的时候必须指定长度, 一旦声明唱不是不可发生变化
+
+
+17. ArrayBuffer是变长数组, 该类习惯对象在声明是可以不用指定长度的,
+随着程序的运行 可以随意增减改变对象的元素
+
+18 List是不可变元素列表, 里面的元素是不可更变,长度也是不可更变的
+
+List的常用方法
+
+//immutable
+scala> val mutable = Set(1,2,3) mutableSet: scala
+
+//可变和不可变集合
+
+Some封装了返回值
+
+20 Scala的类定义也是使用class关键字后面跟类的名称然后大括号
+  class Person{}
+  java类体内
+       属性
+            静态属性
+            非静态属性
+       方法
+            非静态方法
+            静态方法
+       静态代码块
+
+
+scala类体内
+            属性: 非静态属性
+            方法: 非静态方法
+            非静态代码块, 都是属于对象的
+
+Scala中没有static关键字
+Scala中用Object来承担静态的成员定义(单例类)
+
+Class中不能定义静态方法
+在class定义的属性和方法必须要通过实例化的对象才能调用
+在Object里面定义的属性和方法, 直接用Object名称就能调用
+
+D:\develop\ideaWorkspace\scalaHW\out\production\scalaHW\com\zhiyou\bd14\oo>
+javap -private Person
+
+自动生成的定义属性
+    get方法, id
+    set方法, id_$eq(Int)
+
+val只会自动生成get方法, 因为是常量
+
+scala的成员也可以使用private和protect修饰, 但是没有public
+
+
+    没有: 所有对象都可以访问
+    private: 只有自己可以访问
+    protect: 只有子类和同包的可以访问, 也可以额外开放访问的权限
+
+
+静态代码块:
+    java中的静态代码块, 类被加载是就会被执行
+
+    scala 中class 中的过程代码(代码块), 其实就是这个类的构造方法
+
+    定义多个构造方法
+
+
