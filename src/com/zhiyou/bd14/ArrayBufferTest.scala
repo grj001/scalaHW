@@ -51,7 +51,7 @@ object ArrayBufferTest {
 
 
     //drop方法也是删除arrayBuffer中的数据,
-    // 但是它返回一个新arrayBuffer而不会修改远arrayBuffer的数据
+    // 但是它返回一个新arrayBuffer而不会修改原来的arrayBuffer的数据
     println(ab2.drop(1))
     println(ab2.dropRight(1))
     println(ab2)
@@ -62,15 +62,17 @@ object ArrayBufferTest {
 
     val ab4 = ArrayBuffer(1,2,3,4,5,6,7,8,9)
     // 返回一个新的arrayBuffer, 在新的arrayBuffer只有偶数
+    // drop只会删除第一个符合条件的数, 并返回一个新的数组
     val result = ab4.dropWhile(x => x%2 !=0)
     println(result)
 
     val result1 = ab4.filter(x => x%2 ==0)
     println(result1)
 
-    //定义一个函数, 接受一个arraynuffer, 和一个函数
-    //函数对每一个arrayBuffer中的值进行计算, 返回true则在该arrayBuffer中删除该元素,
-    // 返回false的话则从该arrayBuffer中删除该元素
+    //定义一个函数, 接受一个arrayBuffer, 和一个函数
+    // 函数对每一个arrayBuffer中的值进行计算,
+    // 返回true则在该arrayBuffer中删除该元素,
+    // 返回false的话则从改arrayBuffer中留下该元素
     removerBy(ab4, x =>x%2 ==0)
     println(ab4)
 
@@ -87,7 +89,7 @@ object ArrayBufferTest {
   }
 
   def removerBy(ab : ArrayBuffer[Int] ,f:Int => Boolean): Unit ={
-    //对敖贝进行遍历
+    //对数组进行遍历
     for(item <- ab){
       if(!f(item)) ab -= item
     }

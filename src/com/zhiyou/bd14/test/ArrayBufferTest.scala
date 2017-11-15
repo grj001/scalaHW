@@ -1,6 +1,8 @@
-package com.zhiyou.bd14
+package com.zhiyou.bd14.test
 
 import java.util.Random
+
+import scala.collection.mutable.ArrayBuffer
 
 object FunctionTest {
 
@@ -74,4 +76,7 @@ object FunctionTest {
       x*x*scala.math.sqrt(3)/4
     })
   }
+
+
+
 }

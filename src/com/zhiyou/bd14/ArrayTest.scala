@@ -47,9 +47,9 @@ object ArrayTest {
     //定义一个函数, 接受一个数组, 函数把这个数组的两两相邻的元素
     //调换位置
     println("调换位置")
-    val arrayForRaevert = Array(1,2,3,4,5,6,7,8,9)
-    pairRevertArray(arrayForRaevert)
-    println(arrayForRaevert.mkString(","))
+    val arrayForRevert = Array(1,2,3,4,5,6,7,8,9)
+    pairRevertArray(arrayForRevert)
+    println(arrayForRevert.mkString(","))
 
 
     //定义冒泡排序算法
