@@ -1,11 +1,10 @@
 package com.zhiyou.bd14.oo
 
-//Student的伴生类
-class Student(
-               var studentNo: String
-               , var studentName: String
-               , var studentClass: String
-               , var age: Int) {
+//Student
+class Student(var studentNo: String
+              , var studentName: String
+              , var studentClass: String
+              , var age: Int) {
 
   private def classPrivateMethod() = {
     println("伴生类的私有方法classPrivateMethod")
@@ -32,7 +31,6 @@ class Student(
 }
 
 
-
 //Student的伴生对象
 object Student {
   private def objectPrivateMethod(): Unit = {
@@ -53,30 +51,29 @@ object Student {
     println("调用了apply方法")
   }
 
-  def apply(sutdentNo: String, studentName: String, studentClass: String, age: Int) =
+  def apply(sutdentNo: String, studentName: String, studentClass: String, age:
+  Int) =
     new Student(sutdentNo, studentName, studentClass, age)
 }
 
 
-
-
-//main
 object StudentTest {
 
   def main(args: Array[String]): Unit = {
-    val student = new Student("001", "小王", "一年级", 18)
+    //    val student = new Student("001", "小王", "一年级", 18)
+    //    student.printlnString()
+    //    //    student.classPrivateStudentTestMethod()
+    //
+    //    Student.gotoSchoole()
+    //
+    //
+    //    Student.apply()
+    //    Student()
+
+    val student = Student("003", "小李", "一年级", 19)
+    println(student)
     student.printlnString()
-    //    student.classPrivateStudentTestMethod()
-
-    Student.gotoSchoole()
-
-
-    Student.apply()
-    Student()
-
-    val student1 = Student("003", "小李", "一年级", 19)
-    println(student1)
-    student1.printlnString()
   }
 
 }
+

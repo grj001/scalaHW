@@ -18,8 +18,8 @@ abstract class Person(var name:String) {
 
 
 
-//Student
-class Student(name:String) extends Person("学生姓名") {
+
+class Student1(name:String) extends Person("学生姓名") {
   println("Student的构造方法被调用")
   override var ptype: String = "学生类型"
 
@@ -49,12 +49,12 @@ class Teacher(name:String) extends Person("教师姓名") {
 object PersonTest{
   def main(args: Array[String]): Unit = {
 //    var person = new Person()
-    val student = new Student("小张")
+    val student1 = new Student1("小张")
     val teacher = new Teacher("李老师")
 
-    student.printlnMethod()
+    student1.printlnMethod()
     teacher.printlnMethod()
-    student.work()
+    student1.work()
     teacher.work()
   }
 }
